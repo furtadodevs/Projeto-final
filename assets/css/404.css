@@ -1,0 +1,202 @@
+/* ======================================================
+   PÁGINA 404
+   ====================================================== */
+
+.error-page {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  background: #f3f5f9;
+}
+
+/* ======================================================
+   CARD
+   ====================================================== */
+
+.error-card {
+  width: 100%;
+  max-width: 650px;
+
+  padding: 55px 45px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  box-shadow: 0 15px 40px rgba(43, 11, 66, 0.1);
+}
+
+/* ======================================================
+   ÍCONE
+   ====================================================== */
+
+.error-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f3e8ff;
+
+  color: #6f42c1;
+
+  font-size: 34px;
+}
+
+/* ======================================================
+   CÓDIGO 404
+   ====================================================== */
+
+.error-code {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 90px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+
+  color: #6f42c1;
+}
+
+/* ======================================================
+   TÍTULO
+   ====================================================== */
+
+.error-card h1 {
+  margin: 15px 0 12px;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #252525;
+}
+
+/* ======================================================
+   DESCRIÇÃO
+   ====================================================== */
+
+.error-card p {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #6b7280;
+}
+
+/* ======================================================
+   BOTÕES
+   ====================================================== */
+
+.error-actions {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.error-button,
+.error-button-secondary {
+  min-width: 190px;
+
+  padding: 11px 20px;
+
+  font-weight: 600;
+
+  border-radius: 8px;
+}
+
+/* Botão principal */
+
+.error-button {
+  background: #6f42c1;
+
+  border-color: #6f42c1;
+}
+
+.error-button:hover {
+  background: #59339d;
+
+  border-color: #59339d;
+}
+
+/* Botão secundário */
+
+.error-button-secondary {
+  color: #555;
+
+  border-color: #d1d5db;
+
+  background: #ffffff;
+}
+
+.error-button-secondary:hover {
+  background: #f3f4f6;
+
+  color: #333;
+
+  border-color: #bfc3ca;
+}
+
+/* ======================================================
+   RESPONSIVIDADE
+   ====================================================== */
+
+@media (max-width: 576px) {
+  .error-page {
+    min-height: calc(100vh - 60px);
+
+    padding: 25px 15px;
+  }
+
+  .error-card {
+    padding: 40px 25px;
+  }
+
+  .error-code {
+    font-size: 70px;
+  }
+
+  .error-card h1 {
+    font-size: 23px;
+  }
+
+  .error-card p {
+    font-size: 15px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-button,
+  .error-button-secondary {
+    width: 100%;
+  }
+}

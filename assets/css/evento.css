@@ -1,0 +1,561 @@
+/* =========================================
+   CADASTRO DE EVENTOS
+   TEMA ROXO
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  background: #f3eafa;
+
+  color: #35104f;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.evento-container {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-start;
+
+  padding: 45px 20px 60px;
+}
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.evento-card {
+  width: 100%;
+
+  max-width: 850px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid #dfc8ef;
+
+  box-shadow: 0 12px 35px rgba(83, 30, 137, 0.14);
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.evento-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 28px 30px;
+
+  background: linear-gradient(135deg, #4b1378, #7027ad, #8d3dcc);
+
+  color: #ffffff;
+}
+
+/* =========================================
+   ÍCONE
+   ========================================= */
+
+.evento-icon {
+  width: 62px;
+
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  font-size: 28px;
+
+  box-shadow: 0 7px 18px rgba(30, 5, 50, 0.2);
+}
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.evento-header h2 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   DESCRIÇÃO DO CABEÇALHO
+   ========================================= */
+
+.evento-header p {
+  margin: 0;
+
+  color: #eadcff;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+
+#formEvento {
+  padding: 35px 30px 30px;
+}
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+.form-label {
+  display: block;
+
+  color: #35104f;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   INPUT GROUP
+   ========================================= */
+
+.input-group {
+  display: flex;
+}
+
+/* =========================================
+   ÍCONE / PREFIXO
+   ========================================= */
+
+.input-group-text {
+  min-width: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f1e4fa !important;
+
+  border: 1px solid #d9bfea !important;
+
+  border-right: none !important;
+
+  color: #7027ad;
+
+  font-size: 16px;
+
+  border-radius: 10px 0 0 10px !important;
+}
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.form-control,
+.form-select {
+  height: 48px;
+
+  border: 1px solid #d9bfea;
+
+  border-left: none;
+
+  border-radius: 0 10px 10px 0 !important;
+
+  color: #35104f;
+
+  font-size: 14px;
+
+  padding: 10px 14px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.form-control::placeholder {
+  color: #aa98b8;
+}
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.form-select {
+  cursor: pointer;
+
+  background-color: #ffffff;
+}
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #8d3dcc;
+
+  box-shadow: 0 0 0 3px rgba(141, 61, 204, 0.12);
+
+  outline: none;
+}
+
+/* =========================================
+   TEXTAREA
+   ========================================= */
+
+textarea.form-control {
+  height: 120px;
+
+  resize: vertical;
+
+  padding-top: 13px;
+}
+
+/* =========================================
+   TEXTAREA COM ÍCONE
+   ========================================= */
+
+.input-group-textarea {
+  align-items: stretch;
+}
+
+.textarea-icon {
+  align-items: flex-start;
+
+  padding-top: 14px;
+}
+
+/* =========================================
+   INPUT DE ARQUIVO
+   ========================================= */
+
+input[type="file"].form-control {
+  padding-top: 11px;
+
+  cursor: pointer;
+}
+
+input[type="file"].form-control::file-selector-button {
+  margin: -10px 12px -10px -14px;
+
+  height: 46px;
+
+  padding: 0 15px;
+
+  border: none;
+
+  border-right: 1px solid #d9bfea;
+
+  background: #f1e4fa;
+
+  color: #7027ad;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.evento-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+/* =========================================
+   BOTÃO CANCELAR
+   ========================================= */
+
+.btn-cancelar {
+  height: 50px;
+
+  padding: 0 22px;
+
+  border: 1px solid #d7c4e2 !important;
+
+  border-radius: 10px !important;
+
+  background: #ffffff !important;
+
+  color: #654b72 !important;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-cancelar:hover {
+  background: #f7f0fb !important;
+
+  border-color: #bfa2cf !important;
+
+  color: #4d2d5c !important;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   BOTÃO PUBLICAR
+   ========================================= */
+
+.evento-button {
+  height: 50px;
+
+  padding: 0 25px;
+
+  border: none !important;
+
+  border-radius: 10px !important;
+
+  background: linear-gradient(135deg, #6420a8, #8d3dcc) !important;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  box-shadow: 0 8px 20px rgba(100, 32, 168, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.evento-button:hover {
+  background: linear-gradient(135deg, #50158b, #7025ac) !important;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(100, 32, 168, 0.4);
+}
+
+.evento-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   MENSAGEM
+   ========================================= */
+
+#mensagem {
+  margin: 0 30px 30px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   VALIDAÇÃO
+   ========================================= */
+
+.form-control.is-valid,
+.form-select.is-valid {
+  border-color: #7027ad;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #dc3545;
+}
+
+.valid-feedback {
+  color: #7027ad;
+
+  font-size: 12px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .evento-container {
+    padding: 30px 15px 45px;
+  }
+
+  .evento-header {
+    padding: 24px 20px;
+
+    align-items: flex-start;
+  }
+
+  .evento-icon {
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 24px;
+  }
+
+  .evento-header h2 {
+    font-size: 22px;
+  }
+
+  #formEvento {
+    padding: 30px 20px 25px;
+  }
+
+  #mensagem {
+    margin-left: 20px;
+
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .evento-container {
+    padding: 25px 12px 40px;
+  }
+
+  .evento-card {
+    border-radius: 13px;
+  }
+
+  .evento-header {
+    gap: 13px;
+
+    padding: 22px 18px;
+  }
+
+  .evento-icon {
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 22px;
+
+    border-radius: 11px;
+  }
+
+  .evento-header h2 {
+    font-size: 20px;
+  }
+
+  .evento-header p {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+  #formEvento {
+    padding: 25px 18px 22px;
+  }
+
+  .form-label {
+    font-size: 13px;
+  }
+
+  .form-control,
+  .form-select {
+    height: 48px;
+
+    border: 1px solid #d9bfea;
+
+    border-left: none;
+
+    border-radius: 0 10px 10px 0 !important;
+
+    color: #35104f;
+
+    font-size: 14px;
+
+    padding: 10px 14px;
+
+    background-color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  textarea.form-control {
+    height: 110px;
+  }
+
+  .evento-actions {
+    flex-direction: column-reverse;
+
+    width: 100%;
+  }
+
+  .evento-actions .btn {
+    width: 100%;
+  }
+
+  #mensagem {
+    margin-left: 18px;
+
+    margin-right: 18px;
+  }
+}
