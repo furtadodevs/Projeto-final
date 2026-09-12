@@ -1,0 +1,331 @@
+Claro. O problema é que o CSS anterior ainda estava tentando adaptar demais. Vamos deixar **bem fiel ao seu `login.css`**, inclusive com os ícones nos campos.
+
+/* ================================
+   CADASTRO - SISTEMA DE EVENTOS
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: "Poppins", Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #1e0b36 0%,
+    #3b176d 45%,
+    #6f42c1 100%
+  ) !important;
+
+  color: #2b1b3d;
+}
+
+/* ================================
+   CONTAINER
+   ================================ */
+
+main.container {
+  max-width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+   CARD
+   ================================ */
+
+.card {
+  width: 100%;
+  max-width: 500px !important;
+
+  border: 0 !important;
+
+  border-radius: 18px !important;
+
+  background: #ffffff;
+
+  box-shadow: 0 20px 50px rgba(25, 5, 50, 0.35) !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 25px 60px rgba(25, 5, 50, 0.45) !important;
+}
+
+/* ================================
+   TÍTULO
+   ================================ */
+
+h2 {
+  color: #2d1747;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  margin-bottom: 30px !important;
+}
+
+/* ================================
+   ÍCONE PRINCIPAL
+   ================================ */
+
+.bi-person-plus {
+  color: #7b3fc6 !important;
+
+  background: linear-gradient(
+    135deg,
+    #7b3fc6,
+    #a95eea
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================================
+   TEXTO
+   ================================ */
+
+.text-muted {
+  color: #766a82 !important;
+}
+
+/* ================================
+   LABELS
+   ================================ */
+
+.form-label {
+  color: #3d2850;
+
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+/* ================================
+   INPUT GROUP
+   ================================ */
+
+.input-group {
+  position: relative;
+}
+
+/* ================================
+   ÍCONE DOS CAMPOS
+   ================================ */
+
+.input-group-text {
+  background: #f5effc;
+
+  border: 1px solid #ddd0ed;
+
+  color: #7b3fc6;
+
+  border-radius: 10px 0 0 10px;
+
+  min-width: 48px;
+
+  justify-content: center;
+}
+
+/* ================================
+   CAMPOS
+   ================================ */
+
+.form-control {
+  border: 1px solid #ddd0ed;
+
+  border-left: 0;
+
+  padding: 12px 14px;
+
+  border-radius: 0 10px 10px 0;
+
+  color: #33223f;
+
+  background-color: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-control::placeholder {
+  color: #aaa0b3;
+}
+
+.form-control:focus {
+  border-color: #8b4dcc;
+
+  box-shadow: 0 0 0 0.2rem rgba(123, 63, 198, 0.15);
+
+  outline: none;
+}
+
+/* ÍCONE QUANDO O CAMPO ESTÁ SELECIONADO */
+
+.input-group:focus-within .input-group-text {
+  border-color: #8b4dcc;
+
+  color: #7b3fc6;
+
+  background: #f5effc;
+}
+
+/* ================================
+   BOTÃO CADASTRAR
+   ================================ */
+
+.btn-primary {
+  border: none !important;
+
+  background: linear-gradient(
+    135deg,
+    #6f32b5,
+    #8d4fd1
+  ) !important;
+
+  color: #ffffff !important;
+
+  font-weight: 600;
+
+  padding: 13px 20px;
+
+  border-radius: 10px !important;
+
+  box-shadow: 0 7px 18px rgba(111, 50, 181, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(
+    135deg,
+    #59239b,
+    #763bb8
+  ) !important;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 24px rgba(111, 50, 181, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   BOTÃO VOLTAR
+   ================================ */
+
+.btn-outline-secondary {
+  color: #713bb0 !important;
+
+  background: #ffffff !important;
+
+  border: 1px solid #ddd0ed !important;
+
+  font-weight: 500;
+
+  padding: 13px 20px;
+
+  border-radius: 10px !important;
+
+  margin-left: 8px;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+  color: #4e2184 !important;
+
+  background: #f5effc !important;
+
+  border-color: #8b4dcc !important;
+
+  transform: translateY(-2px);
+}
+
+/* ================================
+   MENSAGEM
+   ================================ */
+
+.alert {
+  border-radius: 10px;
+}
+
+/* ================================
+   VALIDAÇÃO
+   ================================ */
+
+.form-control.is-valid {
+  border-color: #6f42c1;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.valid-feedback {
+  color: #6f42c1;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+/* ================================
+   RESPONSIVIDADE
+   ================================ */
+
+@media (max-width: 576px) {
+
+  main.container {
+    padding: 30px 15px !important;
+  }
+
+  .card {
+    border-radius: 15px !important;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .display-3 {
+    font-size: 3.5rem;
+  }
+
+  .btn-primary,
+  .btn-outline-secondary {
+    width: 100%;
+  }
+
+  .btn-outline-secondary {
+    margin-left: 0;
+
+    margin-top: 10px;
+  }
+}
+
