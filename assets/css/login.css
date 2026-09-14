@@ -180,12 +180,13 @@ h1 {
    LINKS
    ================================ */
 
-a {
-  color: #713bb0;
-  font-weight: 500;
-
-  transition: color 0.2s ease;
-}
+   a {
+    display: block;
+    text-align: center;
+    color: #713bb0;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
 
 a:hover {
   color: #4e2184;
