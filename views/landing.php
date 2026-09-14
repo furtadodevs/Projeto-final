@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Eventos | Sistema de Eventos </title>
+    <title>Eventos | Imersão Contagem </title>
 
 
     <!-- Bootstrap -->
@@ -62,8 +62,7 @@
                         </span>
 
                         <span>
-                            Sistema de Eventos
-                        </span>
+Imersão Contagem                        </span>
 
                     </a>
 
@@ -792,7 +791,7 @@
 
                         <i class="bi bi-calendar-event-fill"></i>
 
-                        Sistema de Eventos
+                        Imersão Contagem
 
                     </strong>
 

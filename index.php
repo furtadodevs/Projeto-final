@@ -50,7 +50,7 @@ $paginaInicial = (
     >
 
     <title>
-        Sistema de Eventos
+        Imersão Contagem
     </title>
 
 
@@ -111,7 +111,7 @@ $paginaInicial = (
                         <i class="bi bi-grid-1x2-fill"></i>
 
                         <span>
-                            Sistema de Eventos
+                            Imersão Contagem
                         </span>
 
                     </a>
@@ -233,7 +233,7 @@ $paginaInicial = (
         <footer class="footer-sistema">
 
             <p>
-                Sistema de Eventos
+                Imersão Contagem
             </p>
 
         </footer>
