@@ -83,7 +83,7 @@ Imersão Contagem                        </span>
                     <!-- Botão Cadastrar -->
 
                     <a
-                        href="index.php?page=cadastro"
+                        href="index.php?page=usuario"
                         class="btn-cadastrar">
 
                         <i class="bi bi-person-plus"></i>
