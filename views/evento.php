@@ -240,30 +240,7 @@
                      LOCAL
                      ================================= -->
 
-                <div class="col-md-6">
-
-                    <label for="local" class="form-label">
-                        Local do evento
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-geo-alt"></i>
-                        </span>
-
-                        <input id="local" type="text" class="form-control" placeholder="Ex.: Centro Cultural">
-
-                    </div>
-
-                    <div class="invalid-feedback">
-                        Informe o local do evento.
-                    </div>
-
-                    <div class="valid-feedback">
-                    </div>
-
-                </div>
+                
 
 
                 <!-- =================================
@@ -422,63 +399,39 @@
 
         <div class="card-form mt-4">
 
-            <h4 class="mb-4">
-                Eventos cadastrados
-            </h4>
+            <div class="eventos-lista-header">
 
+                <div class="eventos-lista-titulo">
 
-            <div class="table-responsive">
+                    <div class="eventos-lista-icon">
+                        <i class="bi bi-calendar-event"></i>
+                    </div>
 
-                <table class="table table-striped table-hover align-middle">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                ID
-                            </th>
-
-                            <th>
-                                Título
-                            </th>
-
-                            <th>
-                                Categoria
-                            </th>
-
-                            <th>
-                                Data
-                            </th>
-
-                            <th>
-                                Horário
-                            </th>
-
-                            <th>
-                                Local
-                            </th>
-
-                            <th>
-                                E-mail
-                            </th>
-
-                            <th class="text-center">
-                                Ações
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody id="tabelaEventos">
-
-                    </tbody>
-
-                </table>
-
+                    <div>
+                        <h4>Eventos cadastrados</h4>
+                        <p>Veja a lista de eventos já publicados no sistema.</p>
+                    </div>
+                </div>
             </div>
 
+            <div class="table-responsive">
+                <table class="table tabela-eventos align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Categoria</th>
+                            <th>Data</th>
+                            <th>Horário</th>
+                            <th>Local</th>
+                            <th>E-mail</th>
+                            <th class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaEventos">
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <!-- =========================================

@@ -1,561 +1,632 @@
 /* =========================================
    CADASTRO DE EVENTOS
-   TEMA ROXO
+   TEMA ROXO — VISUAL DO MODELO 2
    ========================================= */
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-
-  font-family: "Poppins", Arial, sans-serif;
-
-  background: #f3eafa;
-
-  color: #35104f;
-}
-
-/* =========================================
-   CONTAINER
-   ========================================= */
-
-.evento-container {
-  min-height: calc(100vh - 80px);
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: flex-start;
-
-  padding: 45px 20px 60px;
-}
-
-/* =========================================
-   CARD
-   ========================================= */
-
-.evento-card {
-  width: 100%;
-
-  max-width: 850px;
-
-  background: #ffffff;
-
-  border-radius: 16px;
-
-  overflow: hidden;
-
-  border: 1px solid #dfc8ef;
-
-  box-shadow: 0 12px 35px rgba(83, 30, 137, 0.14);
-}
-
-/* =========================================
-   CABEÇALHO
-   ========================================= */
-
-.evento-header {
-  display: flex;
-
-  align-items: center;
-
-  gap: 18px;
-
-  padding: 28px 30px;
-
-  background: linear-gradient(135deg, #4b1378, #7027ad, #8d3dcc);
-
-  color: #ffffff;
-}
-
-/* =========================================
-   ÍCONE
-   ========================================= */
-
-.evento-icon {
-  width: 62px;
-
-  height: 62px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 14px;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  font-size: 28px;
-
-  box-shadow: 0 7px 18px rgba(30, 5, 50, 0.2);
-}
-
-/* =========================================
-   TÍTULO
-   ========================================= */
-
-.evento-header h2 {
-  margin: 0 0 5px;
-
-  color: #ffffff;
-
-  font-size: 25px;
-
-  font-weight: 700;
-}
-
-/* =========================================
-   DESCRIÇÃO DO CABEÇALHO
-   ========================================= */
-
-.evento-header p {
-  margin: 0;
-
-  color: #eadcff;
-
-  font-size: 13px;
-}
-
-/* =========================================
-   FORMULÁRIO
-   ========================================= */
-
-#formEvento {
-  padding: 35px 30px 30px;
-}
-
-/* =========================================
-   LABEL
-   ========================================= */
-
-.form-label {
-  display: block;
-
-  color: #35104f;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  margin-bottom: 8px;
-}
-
-/* =========================================
-   INPUT GROUP
-   ========================================= */
-
-.input-group {
-  display: flex;
-}
-
-/* =========================================
-   ÍCONE / PREFIXO
-   ========================================= */
-
-.input-group-text {
-  min-width: 50px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background: #f1e4fa !important;
-
-  border: 1px solid #d9bfea !important;
-
-  border-right: none !important;
-
-  color: #7027ad;
-
-  font-size: 16px;
-
-  border-radius: 10px 0 0 10px !important;
-}
-
-/* =========================================
-   INPUT
-   ========================================= */
-
-.form-control,
-.form-select {
-  height: 48px;
-
-  border: 1px solid #d9bfea;
-
-  border-left: none;
-
-  border-radius: 0 10px 10px 0 !important;
-
-  color: #35104f;
-
-  font-size: 14px;
-
-  padding: 10px 14px;
-
-  background: #ffffff;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-/* =========================================
-   PLACEHOLDER
-   ========================================= */
-
-.form-control::placeholder {
-  color: #aa98b8;
-}
-
-/* =========================================
-   SELECT
-   ========================================= */
-
-.form-select {
-  cursor: pointer;
-
-  background-color: #ffffff;
-}
-
-/* =========================================
-   FOCUS
-   ========================================= */
-
-.form-control:focus,
-.form-select:focus {
-  border-color: #8d3dcc;
-
-  box-shadow: 0 0 0 3px rgba(141, 61, 204, 0.12);
-
-  outline: none;
-}
-
-/* =========================================
-   TEXTAREA
-   ========================================= */
-
-textarea.form-control {
-  height: 120px;
-
-  resize: vertical;
-
-  padding-top: 13px;
-}
-
-/* =========================================
-   TEXTAREA COM ÍCONE
-   ========================================= */
-
-.input-group-textarea {
-  align-items: stretch;
-}
-
-.textarea-icon {
-  align-items: flex-start;
-
-  padding-top: 14px;
-}
-
-/* =========================================
-   INPUT DE ARQUIVO
-   ========================================= */
-
-input[type="file"].form-control {
-  padding-top: 11px;
-
-  cursor: pointer;
-}
-
-input[type="file"].form-control::file-selector-button {
-  margin: -10px 12px -10px -14px;
-
-  height: 46px;
-
-  padding: 0 15px;
-
-  border: none;
-
-  border-right: 1px solid #d9bfea;
-
-  background: #f1e4fa;
-
-  color: #7027ad;
-
-  font-family: "Poppins", Arial, sans-serif;
-
-  font-size: 13px;
-
-  font-weight: 500;
-
-  cursor: pointer;
-}
-
-/* =========================================
-   BOTÕES
-   ========================================= */
-
-.evento-actions {
-  display: flex;
-
-  justify-content: flex-end;
-
-  align-items: center;
-
-  gap: 12px;
-
-  margin-top: 30px;
-}
-
-/* =========================================
-   BOTÃO CANCELAR
-   ========================================= */
-
-.btn-cancelar {
-  height: 50px;
-
-  padding: 0 22px;
-
-  border: 1px solid #d7c4e2 !important;
-
-  border-radius: 10px !important;
-
-  background: #ffffff !important;
-
-  color: #654b72 !important;
-
-  font-size: 14px;
-
-  font-weight: 500;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.btn-cancelar:hover {
-  background: #f7f0fb !important;
-
-  border-color: #bfa2cf !important;
-
-  color: #4d2d5c !important;
-
-  transform: translateY(-1px);
-}
-
-/* =========================================
-   BOTÃO PUBLICAR
-   ========================================= */
-
-.evento-button {
-  height: 50px;
-
-  padding: 0 25px;
-
-  border: none !important;
-
-  border-radius: 10px !important;
-
-  background: linear-gradient(135deg, #6420a8, #8d3dcc) !important;
-
-  color: #ffffff !important;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  box-shadow: 0 8px 20px rgba(100, 32, 168, 0.3);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.evento-button:hover {
-  background: linear-gradient(135deg, #50158b, #7025ac) !important;
-
-  transform: translateY(-2px);
-
-  box-shadow: 0 12px 25px rgba(100, 32, 168, 0.4);
-}
-
-.evento-button:active {
-  transform: translateY(0);
-}
-
-/* =========================================
-   MENSAGEM
-   ========================================= */
-
-#mensagem {
-  margin: 0 30px 30px;
-
-  border-radius: 10px;
-
-  font-size: 13px;
-}
-
-/* =========================================
-   VALIDAÇÃO
-   ========================================= */
-
-.form-control.is-valid,
-.form-select.is-valid {
-  border-color: #7027ad;
-}
-
-.form-control.is-invalid,
-.form-select.is-invalid {
-  border-color: #dc3545;
-}
-
-.valid-feedback {
-  color: #7027ad;
-
-  font-size: 12px;
-}
-
-.invalid-feedback {
-  color: #dc3545;
-
-  font-size: 12px;
-}
-
-/* =========================================
-   RESPONSIVIDADE
-   ========================================= */
-
-@media (max-width: 768px) {
-  .evento-container {
-    padding: 30px 15px 45px;
+   * {
+    box-sizing: border-box;
   }
-
-  .evento-header {
-    padding: 24px 20px;
-
+  
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f5f1f9;
+    color: #35104f;
+  }
+  
+  /* =========================================
+     CONTAINER
+     ========================================= */
+  
+  .evento-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
+    padding: 30px 8px 40px;
   }
-
-  .evento-icon {
-    width: 55px;
-
-    height: 55px;
-
-    font-size: 24px;
-  }
-
-  .evento-header h2 {
-    font-size: 22px;
-  }
-
-  #formEvento {
-    padding: 30px 20px 25px;
-  }
-
-  #mensagem {
-    margin-left: 20px;
-
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  .evento-container {
-    padding: 25px 12px 40px;
-  }
-
+  
+  /* =========================================
+     CARD PRINCIPAL
+     ========================================= */
+  
   .evento-card {
-    border-radius: 13px;
+    width: 100%;
+    max-width: 1080px;
+    background: #ffffff;
+    border-radius: 17px;
+    overflow: hidden;
+    border: 1px solid #dcc5ef;
+    box-shadow: 0 10px 35px rgba(83, 30, 137, 0.10);
   }
-
+  
+  /* =========================================
+     CABEÇALHO
+     ========================================= */
+  
   .evento-header {
-    gap: 13px;
-
-    padding: 22px 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 38px;
+    min-height: 125px;
+    background: linear-gradient(135deg, #4b1378 0%, #7027ad 55%, #8d3dcc 100%);
+    color: #ffffff;
   }
-
+  
+  .evento-header > div:last-child {
+    min-width: 0;
+  }
+  
   .evento-icon {
-    width: 50px;
-
-    height: 50px;
-
-    font-size: 22px;
-
-    border-radius: 11px;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    font-size: 34px;
+    box-shadow: 0 8px 20px rgba(30, 5, 50, 0.20);
   }
-
+  
   .evento-header h2 {
-    font-size: 20px;
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 700;
   }
-
+  
   .evento-header p {
-    font-size: 11px;
-
-    line-height: 1.5;
+    margin: 0;
+    color: #f0e4ff;
+    font-size: 15px;
   }
-
+  
+  /* =========================================
+     FORMULÁRIO
+     ========================================= */
+  
   #formEvento {
-    padding: 25px 18px 22px;
+    padding: 38px 38px 32px;
   }
-
+  
+  #formEvento > .row {
+    --bs-gutter-x: 26px;
+    --bs-gutter-y: 25px;
+  }
+  
   .form-label {
-    font-size: 13px;
+    display: block;
+    color: #32104e;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 9px;
   }
-
+  
+  /* =========================================
+     INPUT GROUP
+     ========================================= */
+  
+  .input-group {
+    display: flex;
+    width: 100%;
+  }
+  
+  .input-group-text {
+    min-width: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0e3fa !important;
+    border: 1px solid #d4b6ed !important;
+    border-right: 0 !important;
+    color: #7430b0;
+    font-size: 17px;
+    border-radius: 10px 0 0 10px !important;
+  }
+  
+  /* =========================================
+     CAMPOS
+     ========================================= */
+  
   .form-control,
   .form-select {
-    height: 48px;
-
-    border: 1px solid #d9bfea;
-
-    border-left: none;
-
+    min-height: 56px;
+    height: 56px;
+    border: 1px solid #d4b6ed;
+    border-left: 0;
     border-radius: 0 10px 10px 0 !important;
-
     color: #35104f;
-
-    font-size: 14px;
-
-    padding: 10px 14px;
-
-    background-color: #ffffff;
-
+    font-size: 15px;
+    padding: 12px 16px;
+    background: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-control::placeholder {
+    color: #ad9fc0;
+  }
+  
+  .form-select {
     cursor: pointer;
-
-    transition:
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
+    background-color: #ffffff;
   }
-
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #8d3dcc;
+    box-shadow: 0 0 0 3px rgba(141, 61, 204, 0.12);
+    outline: none;
+  }
+  
   textarea.form-control {
-    height: 110px;
+    height: 135px;
+    min-height: 135px;
+    resize: vertical;
+    padding-top: 14px;
   }
-
+  
+  .input-group-textarea {
+    align-items: stretch;
+  }
+  
+  .textarea-icon {
+    align-items: flex-start;
+    padding-top: 16px;
+  }
+  
+  /* =========================================
+     ARQUIVO
+     ========================================= */
+  
+  input[type="file"].form-control {
+    padding-top: 12px;
+    cursor: pointer;
+  }
+  
+  input[type="file"].form-control::file-selector-button {
+    margin: -12px 14px -12px -16px;
+    height: 54px;
+    padding: 0 18px;
+    border: 0;
+    border-right: 1px solid #d4b6ed;
+    background: #f0e3fa;
+    color: #7430b0;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* =========================================
+     BOTÕES
+     ========================================= */
+  
   .evento-actions {
-    flex-direction: column-reverse;
-
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    margin-top: 32px;
   }
-
+  
   .evento-actions .btn {
+    min-height: 55px;
+    border-radius: 10px !important;
+    font-size: 15px;
+  }
+  
+  .btn-cancelar {
+    height: 55px;
+    padding: 0 25px;
+    border: 1px solid #d4bce3 !important;
+    background: #ffffff !important;
+    color: #68497a !important;
+    font-weight: 500;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .btn-cancelar:hover {
+    background: #f8f2fc !important;
+    border-color: #bfa3d0 !important;
+    color: #4d2d5c !important;
+    transform: translateY(-1px);
+  }
+  
+  .evento-button {
+    height: 55px;
+    padding: 0 28px;
+    border: none !important;
+    border-radius: 10px !important;
+    background: linear-gradient(135deg, #6420a8, #8d3dcc) !important;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(100, 32, 168, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  
+  .evento-button:hover {
+    background: linear-gradient(135deg, #50158b, #7025ac) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(100, 32, 168, 0.38);
+  }
+  
+  .evento-button:active {
+    transform: translateY(0);
+  }
+  
+  /* =========================================
+     LISTA DE EVENTOS
+     ========================================= */
+  
+  .card-form {
+    margin: 0 24px 24px;
+    padding: 22px 18px 18px;
+    background: #ffffff;
+    border: 1px solid #e0d1ee;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(83, 30, 137, 0.06);
+  }
+  
+  .eventos-lista-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 0 2px 18px;
+  }
+  
+  .eventos-lista-titulo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .eventos-lista-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #f1e7fb;
+    color: #6f2db0;
+    font-size: 28px;
+  }
+  
+  .eventos-lista-titulo h4 {
+    margin: 0 0 3px;
+    color: #4b167b;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .eventos-lista-titulo p {
+    margin: 0;
+    color: #8d7b9c;
+    font-size: 13px;
+  }
+  
+  .eventos-total {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: #f0e3fb;
+    color: #6823a2;
+    font-size: 13px;
+  }
+  
+  .eventos-total i {
+    font-size: 16px;
+  }
+  
+  .eventos-total strong {
+    font-weight: 700;
+  }
+  
+  /* =========================================
+     TABELA
+     ========================================= */
+  
+  .table-responsive {
+    border-radius: 13px;
+    overflow-x: auto;
+    border: 1px solid #e3d5f0;
+  }
+  
+  .tabela-eventos {
     width: 100%;
+    min-width: 900px;
+    margin-bottom: 0 !important;
+    color: #3b2450;
+    vertical-align: middle;
   }
-
-  #mensagem {
-    margin-left: 18px;
-
-    margin-right: 18px;
+  
+  .tabela-eventos thead th {
+    padding: 15px 14px;
+    background: #f2e9fc;
+    border-bottom: 1px solid #ded0eb;
+    color: #4a216f;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
   }
+  
+  .tabela-eventos tbody td {
+    padding: 15px 14px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee7f5;
+    color: #4a3658;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  
+  .tabela-eventos tbody tr:last-child td {
+    border-bottom: 0;
+  }
+ 
+  
+  .tabela-eventos tbody tr:hover td:nth-child(3) {
+    background: #7534bd !important;
+    color: #ffffff !important;
 }
+  /* chips para as células de informação */
+  .tabela-eventos tbody td:nth-child(3),
+  .tabela-eventos tbody td:nth-child(4),
+  .tabela-eventos tbody td:nth-child(5),
+  .tabela-eventos tbody td:nth-child(6),
+  .tabela-eventos tbody td:nth-child(7) {
+    font-weight: 500;
+  }
+  
+  .tabela-eventos tbody td:nth-child(3) {
+    color: #ffffff;
+    background: #7534bd;
+    font-weight: 600;
+  }
+  
+  /* =========================================
+     AÇÕES DA TABELA
+     ========================================= */
+  
+  .tabela-eventos td:last-child {
+    text-align: center;
+  }
+  
+  .tabela-eventos td:last-child button,
+  .tabela-eventos td:last-child a {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 8px;
+    margin: 0 2px;
+  }
+  
+  .tabela-eventos td:last-child .btn-warning,
+  .tabela-eventos td:last-child button.btn-warning,
+  .tabela-eventos td:last-child a.btn-warning {
+    background: #ffd31c !important;
+    color: #2f1a02 !important;
+  }
+  
+  .tabela-eventos td:last-child .btn-danger,
+  .tabela-eventos td:last-child button.btn-danger,
+  .tabela-eventos td:last-child a.btn-danger {
+    background: #ef476f !important;
+    color: #ffffff !important;
+  }
+  
+  /* Caso os botões usem apenas classes genéricas */
+  .tabela-eventos td:last-child .btn {
+    border: 0 !important;
+    box-shadow: none;
+  }
+  
+  /* =========================================
+     MENSAGEM
+     ========================================= */
+  
+  #mensagem {
+    margin: 0 38px 30px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  
+  /* =========================================
+     VALIDAÇÃO
+     ========================================= */
+  
+  .form-control.is-valid,
+  .form-select.is-valid {
+    border-color: #7027ad;
+  }
+  
+  .form-control.is-invalid,
+  .form-select.is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .valid-feedback {
+    color: #7027ad;
+    font-size: 12px;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 12px;
+  }
+  
+  /* =========================================
+     RESPONSIVIDADE
+     ========================================= */
+  
+  @media (max-width: 900px) {
+    .evento-container {
+      padding: 24px 8px 35px;
+    }
+  
+    .evento-header {
+      padding: 26px 28px;
+    }
+  
+    #formEvento {
+      padding: 32px 28px 28px;
+    }
+  
+    #mensagem {
+      margin-left: 28px;
+      margin-right: 28px;
+    }
+  
+    .card-form {
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .evento-header {
+      padding: 24px 20px;
+      gap: 14px;
+    }
+  
+    .evento-icon {
+      width: 58px;
+      height: 58px;
+      font-size: 26px;
+    }
+  
+    .evento-header h2 {
+      font-size: 23px;
+    }
+  
+    .evento-header p {
+      font-size: 12px;
+    }
+  
+    #formEvento {
+      padding: 28px 20px 25px;
+    }
+  
+    .evento-actions {
+      margin-top: 28px;
+    }
+  
+    .eventos-lista-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  
+    #mensagem {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .evento-container {
+      padding: 18px 6px 30px;
+    }
+  
+    .evento-card {
+      border-radius: 13px;
+    }
+  
+    .evento-header {
+      padding: 20px 16px;
+    }
+  
+    .evento-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      border-radius: 11px;
+    }
+  
+    .evento-header h2 {
+      font-size: 20px;
+    }
+  
+    .evento-header p {
+      font-size: 11px;
+      line-height: 1.45;
+    }
+  
+    #formEvento {
+      padding: 24px 16px 22px;
+    }
+  
+    .form-label {
+      font-size: 13px;
+    }
+  
+    .form-control,
+    .form-select {
+      height: 50px;
+      min-height: 50px;
+      font-size: 14px;
+    }
+  
+    textarea.form-control {
+      height: 110px;
+      min-height: 110px;
+    }
+  
+    .input-group-text {
+      min-width: 52px;
+    }
+  
+    input[type="file"].form-control::file-selector-button {
+      height: 48px;
+    }
+  
+    .evento-actions {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  
+    .evento-actions .btn {
+      width: 100%;
+    }
+  
+    .card-form {
+      margin: 0 10px 14px;
+      padding: 18px 12px 12px;
+    }
+  
+    .eventos-lista-titulo {
+      align-items: flex-start;
+    }
+  
+    .eventos-lista-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 23px;
+    }
+  
+    .eventos-lista-titulo h4 {
+      font-size: 20px;
+    }
+  
+    .eventos-lista-titulo p {
+      font-size: 11px;
+    }
+  
+    #mensagem {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+  

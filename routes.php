@@ -9,7 +9,9 @@ $paginasValidas = [
     "login" => __DIR__ . "/views/login.php",
     "eventos" => __DIR__ . "/views/evento.php",
     "usuario" => __DIR__  . "/views/usuario.php",
-    
+    "visualizacaoevento1" => __DIR__ . "/views/vs1.php",
+    "visualizacaoevento2" => __DIR__ . "/views/vs2.php",
+    "visualizacaoevento3" => __DIR__ . "/views/vs3.php",
 ];
 
 // Capturar a página informada na url 

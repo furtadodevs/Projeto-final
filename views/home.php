@@ -58,73 +58,40 @@
 
 
         <!-- EVENTO 1 -->
-
         <div class="col-md-6 col-lg-4">
-
             <div class="card cadastro-card h-100">
-
-                <img
-                    src="https://picsum.photos/600/350?random=10"
+            <img src="./assets/img/festivaldemusica.jpg"
                     class="card-img-top evento-imagem"
                     alt="Imagem do evento">
 
-                <div class="card-body">
-
+                    <div class="card-body">
                     <div class="evento-categoria">
 
-                        <i class="bi bi-tag"></i>
+                     <i class="bi bi-tag"></i>Música</div>
 
-                        Música
+                    <h5 class="card-title">Festival de Música</h5>
 
-                    </div>
-
-                    <h5 class="card-title">
-
-                        Festival de Música
-
-                    </h5>
-
-                    <p class="card-text">
-
-                        Evento musical com apresentações de artistas
-                        e atrações especiais.
-
-                    </p>
-
+                    <p class="card-text">Evento musical com apresentações de artistas e atrações especiais.</p>
 
                     <div class="evento-info">
+                        <div>
+                            <i class="bi bi-calendar3"></i>20/09/2026</div>
 
                         <div>
-
-                            <i class="bi bi-calendar3"></i>
-
-                            20/09/2026
+                            <i class="bi bi-clock"></i>19:00
 
                         </div>
 
                         <div>
-
-                            <i class="bi bi-clock"></i>
-
-                            19:00
-
-                        </div>
-
-                        <div>
-
                             <i class="bi bi-geo-alt"></i>
-
                             Contagem - MG
 
                         </div>
-
                     </div>
 
-
                     <div class="mt-4">
-
                         <a
-                            href="#"
+                            href="index.php?page=visualizacaoevento1"
                             class="btn btn-primary w-100">
 
                             <i class="bi bi-eye me-1"></i>
@@ -150,7 +117,7 @@
             <div class="card cadastro-card h-100">
 
                 <img
-                    src="https://picsum.photos/600/350?random=11"
+                    src="./assets/img/feiracultural.png"
                     class="card-img-top evento-imagem"
                     alt="Imagem do evento">
 
@@ -210,8 +177,8 @@
                     <div class="mt-4">
 
                         <a
-                            href="#"
-                            class="btn btn-primary w-100">
+                        href="index.php?page=visualizacaoevento2"
+                        class="btn btn-primary w-100">
 
                             <i class="bi bi-eye me-1"></i>
 
@@ -236,7 +203,7 @@
             <div class="card cadastro-card h-100">
 
                 <img
-                    src="https://picsum.photos/600/350?random=12"
+                    src="./assets/img/encontro de tecnologia.jpg"
                     class="card-img-top evento-imagem"
                     alt="Imagem do evento">
 
@@ -296,7 +263,7 @@
                     <div class="mt-4">
 
                         <a
-                            href="#"
+                            href="index.php?page=visualizacaoevento3"
                             class="btn btn-primary w-100">
 
                             <i class="bi bi-eye me-1"></i>

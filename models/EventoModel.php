@@ -37,7 +37,6 @@ function cadastrarEvento($pdo, $dados)
             imagem,
             data,
             horario,
-            local,
             endereco,
             telefone,
             email,

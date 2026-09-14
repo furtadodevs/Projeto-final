@@ -462,31 +462,6 @@ function validarEvento($validator)
     );
 
 
-    // =====================================
-    // LOCAL
-    // =====================================
-
-    $validator->required(
-        "local",
-        "Informe o local do evento."
-    );
-
-    $validator->string(
-        "local",
-        "O local deve ser um texto."
-    );
-
-    $validator->minLength(
-        "local",
-        3,
-        "O local deve ter pelo menos 3 caracteres."
-    );
-
-    $validator->maxLength(
-        "local",
-        150,
-        "O local deve ter no máximo 150 caracteres."
-    );
 
 
     // =====================================
